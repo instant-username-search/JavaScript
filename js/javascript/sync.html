@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>synchronization</title>
+</head>
+<body>
+    <h1>synchronize</h1>
+    <script>
+        function fun(ms){
+            console.log("delay is started")
+            var start=Date.now()
+            while(Date.now()-start<=ms){
+                console.log("delay")
+            }
+            console.log("Delay is ended")
+        }
+        function fun1(){
+            console.log("this is first statement")
+        }
+        function fun2(){
+            console.log("this is second statement")
+            fun(1000)
+        }
+        function fun3(){
+            console.log("this is third statement")
+        }
+        fun1()
+        fun2()
+        fun3()
+    </script>
+</body>
+</html>

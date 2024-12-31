@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>asynchronization</title>
+</head>
+<body>
+    <h1>Asynchronize</h1>
+    <script>
+        function fun1(){
+            console.log("this is first statement")
+        }
+        function fun2(){
+            console.log("this is second statement")
+        }
+        function fun3(){
+            console.log("this is third statement")
+        }
+        fun1()
+        setTimeout(fun2,1000)
+        fun3()
+    </script>
+</body>
+</html>
